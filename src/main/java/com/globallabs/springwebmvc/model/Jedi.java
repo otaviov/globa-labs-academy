@@ -2,7 +2,10 @@ package com.globallabs.springwebmvc.model;
 
 public class Jedi {
 
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String lastName;
 
     public Jedi (final String name, final String lastname){
