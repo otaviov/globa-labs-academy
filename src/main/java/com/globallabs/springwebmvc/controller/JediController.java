@@ -1,5 +1,6 @@
 package com.globallabs.springwebmvc.controller;
 
+import javax.validation.Valid;
 import com.globallabs.springwebmvc.model.Jedi;
 import com.globallabs.springwebmvc.repository.JediRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class JediController {
     public ModelAndView newJedi(){
 
         final ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("new-jedi");
+        modelAndView.setViewName(" new-jedi");
 
         modelAndView.addObject( "jedi", new Jedi());
         return modelAndView;
