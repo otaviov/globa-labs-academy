@@ -1,6 +1,5 @@
 package com.globallabs.springwebmvc.rest;
 
-import java.net.http.HttpResponse;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -19,31 +18,45 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Optional;
-
 @RestController
 public class JediResource {
 
     @Autowired
-    private JediRepository repository;
+    private JediService service;
 
     @GetMapping("/api/jedi")
     public List<Jedi> getAllJedi() {
 
-        return repository.findAll();
+       return service.findAll();
 
     }
 
     @GetMapping("/api/jedi/{id}")
-    public Jedi getJedi(@PathVariable("id") Long id, HttpResponse response ){
-        final Optional<Jedi> jedi = repository.findById(id);
-        if(jedi.isPresent()){
-            return jedi.get();
-        }else{
-            throw new JediNotFoundException();
-        }
-        return jedi.get();
+    public ResponseEntity<Jedi> getJedi(@PathVariable("id") Long id) {
+        final Jedi jedi = service.findById(id);
+
+        return ResponseEntity.ok(jedi);
     }
 
+    @PostMapping("/api/jedi")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Jedi createJedi(@Valid @RequestBody Jedi jedi){
+
+        return service.save(jedi);
+    }
+    
+    @PutMapping("/api/jedi/{id}")
+    public ResponseEntity<Jedi> updateJedi(@PathVariable("id") Long id, @Valid @RequestBody Jedi dto) {
+
+        final Jedi jedi = service.update(id, dto);
+
+        return ResponseEntity.ok(jedi);
+
+    }
+
+    @DeleteMapping("/api/jedi/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") Long id) {
+        service.delete(id);
+    }
 }
