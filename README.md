@@ -1,50 +1,49 @@
-# globa-labs-academy
-
-# O que √© Spring
+# O que È Spring
 
 ## Spring Framework
 
-    + Complemento ao Java EE. N√£o √© uma implmenta√ß√£o. Integra√ß√£o com algumas especifica√ß√µes  
-    + Container de Invers√£o de Controle - Invers√£o de Controle (IoC)
-    + Inje√ß√£o de Depend√™ncia - inje√ß√£o de depend√™ncia (DI): @Autowired
-    + Spring Beans: @Bean: Um Objeto que ser√° gerenciado pelo Container IoC
-    + org.springframework.context.ApplicationContext: Representa IoC container e √© responsavel instanciar, configurar e cosntruir esses beans.
-    + 5.0.6
-    + Programa√ß√£o Orientada a Aspectos do Spring (AOP)
-    + Spring Web MVC
-    + Spring WebFlux ^ 5.0
-            - http://www.reactive-streams.org - SPEC ( https://github.com/reactive-streamsreactive-streams-jvm )
-            
-            + http://projectreactor.io - IMPL (Reactor √© uma biblioteca Reactive Streams)
-            + http://reactivex.io - IMPL ( https://github.com/ReactiveX/RxJava )
-           
-    + https://spring.io/projects/spring-framework#learn
-    + https://docs.spring.io/spring/docs/current/spring-framework-reference/overview.html
-    + https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html
++ Complemento ao Java EE. N„o È uma implmentaÁ„o. IntegraÁ„o com algumas especificaÁıes
++ Container de Invers„o de Controle - Inversion of Control (IoC)
++ InjeÁ„o de DependÍncia - dependency injection (DI) : @Autowired	
++ Spring Beans : <bean/>  @Bean : Um Objeto que ser· gerenciado pelo IoC Container
++ org.springframework.context.ApplicationContext : Representa IoC container e È responsavel instanciar, configurar e cosntruir esses beans.
++ 5.0.6
++ Spring?s Aspect-Oriented Programming (AOP)
++ Spring Web MVC 
++ Spring WebFlux ^5.0 
+	- http://www.reactive-streams.org - SPEC (https://github.com/reactive-streams/reactive-streams-jvm)
+
+	+ http://projectreactor.io - IMPL (Reactor is a Reactive Streams library)
+	+ http://reactivex.io - IMPL (https://github.com/ReactiveX/RxJava)
+
++ https://spring.io/projects/spring-framework#learn
++ https://docs.spring.io/spring/docs/current/spring-framework-reference/overview.html
++ https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html
 
 ## Spring Boot
 
-    + Conven√ß√£o sobre Configura√ß√£o.
-    + Auto configura√ß√µes por padr√£o.
-    + Pronto para Produ√ß√£o (voc√™ pode "simplesmente correr").
-    + N√£o √© um gerador de c√≥digo.
-    + Iniciadores de modulos plug-and-play
-    + Tomcat, Jetty ou Undertow embedado
-    + 2.0.3
-            
-            + https://spring.io/projects/spring-boot
-            + https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/
++ ConvenÁ„o sobre ConfiguraÁ„o.
++ Auto configuraÁıes por padr„o.
++ Pronto para ProduÁ„o (you can "just run").
++ N„o È um gerador de cÛdigo.
++ Plug-and-play de modulos starters
++ Tomcat, Jetty ou Undertow embedado
++ 2.0.3
+
+	+ https://spring.io/projects/spring-boot
+	+ https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/
+
 
 ## Spring Web MVC
 
-    + MVC - Modelo, Visualiza√ß√£o e Controlador
++ MVC - Model, View and Controller
 
-            + Ver = https://www.thymeleaf.org/
+	+ View = https://www.thymeleaf.org/
 
-    + Start.io = Web e Thymeleaf
-    
-    + @Controlador
-    + @Reposit√≥rio
-    + @Servi√ßo
-    + ModelAndView VS Model
-    + EL $ {}
++ Start.io = Web e Thymeleaf
+
++ @Controller
++ @Repository
++ @Service
++ ModelAndView VS Model
++ EL ${}
