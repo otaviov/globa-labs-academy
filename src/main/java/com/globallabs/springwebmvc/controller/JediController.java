@@ -1,6 +1,5 @@
 package com.globallabs.springwebmvc.controller;
 
-import javax.validation.Valid;
 import com.globallabs.springwebmvc.model.Jedi;
 import com.globallabs.springwebmvc.repository.JediRepository;
 import org.springframework.beans.factory.annotation.Autowired;

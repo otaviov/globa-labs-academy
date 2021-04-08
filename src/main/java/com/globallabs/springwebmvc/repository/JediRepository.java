@@ -1,10 +1,10 @@
 package com.globallabs.springwebmvc.repository;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.globallabs.springwebmvc.model.Jedi;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 public class JediRepository {
@@ -22,8 +22,10 @@ public class JediRepository {
     }
 
     public void add( final Jedi jedi) {
+
         this.jedi.add(jedi);
     }
 
-    
+
+
 }
