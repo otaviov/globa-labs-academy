@@ -1,5 +1,6 @@
 package com.globallabs.springwebmvc.rest;
 
+import java.net.http.HttpResponse;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -35,8 +36,8 @@ public class JediResource {
     }
 
     @GetMapping("/api/jedi/{id}")
-    public Jedi getJedi(@PathVariable("id") Long id){
-        final Optional<Jedi> jedi = repository.findById(id).get();
+    public Jedi getJedi(@PathVariable("id") Long id, HttpResponse response ){
+        final Optional<Jedi> jedi = repository.findById(id);
         if(jedi.isPresent()){
             return jedi.get();
         }else{
